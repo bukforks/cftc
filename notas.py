@@ -9,7 +9,7 @@ arquivo = zipfile.ZipFile(io.BytesIO(download.content))
 tabela = pd.read_excel(arquivo.open('c_year.xls'))
 dados = tabela[['Market_and_Exchange_Names', 'Report_Date_as_MM_DD_YYYY', 'M_Money_Positions_Long_ALL', 'M_Money_Positions_Short_ALL']]
 
-def texto():
+def texto(dados):
   
   commodities = ['WHEAT-SRW - CHICAGO BOARD OF TRADE', 
                'WHEAT-HRW - CHICAGO BOARD OF TRADE', 
