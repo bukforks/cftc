@@ -152,4 +152,4 @@ def texto():
 
     texto = f'Os fundos especulativos {movimento}{aposta}{produto}, segundo a Comissão de Negociação de Futuros de Commodities (CFTC). Entre {data_antiga_extenso} e {data_nova_extenso}, {frase_saldo} <br><br>'
     notas += titulo + texto
-  return
+  return notas
