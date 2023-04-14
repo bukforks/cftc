@@ -5,7 +5,7 @@ import io
 
 
 
-def texto(dados):
+def texto():
   
   link_cftc = 'https://www.cftc.gov/files/dea/history/com_disagg_xls_2023.zip'
   download = requests.get(link_cftc)
