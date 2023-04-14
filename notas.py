@@ -1,4 +1,25 @@
+import zipfile
+import pandas as pd
+import requests
+import io
+
+link_cftc = 'https://www.cftc.gov/files/dea/history/com_disagg_xls_2023.zip'
+download = requests.get(link_cftc)
+arquivo = zipfile.ZipFile(io.BytesIO(download.content))
+tabela = pd.read_excel(arquivo.open('c_year.xls'))
+dados = tabela[['Market_and_Exchange_Names', 'Report_Date_as_MM_DD_YYYY', 'M_Money_Positions_Long_ALL', 'M_Money_Positions_Short_ALL']]
+
 def texto():
+  
+  commodities = ['WHEAT-SRW - CHICAGO BOARD OF TRADE', 
+               'WHEAT-HRW - CHICAGO BOARD OF TRADE', 
+               'SOYBEANS - CHICAGO BOARD OF TRADE', 
+               'CORN - CHICAGO BOARD OF TRADE', 
+               'FRZN CONCENTRATED ORANGE JUICE - ICE FUTURES U.S.', 
+               'COTTON NO. 2 - ICE FUTURES U.S.', 
+               'COCOA - ICE FUTURES U.S.', 
+               'SUGAR NO. 11 - ICE FUTURES U.S.', 
+               'COFFEE C - ICE FUTURES U.S.']
 
   notas = f''
 
