@@ -3,13 +3,15 @@ import pandas as pd
 import requests
 import io
 
-link_cftc = 'https://www.cftc.gov/files/dea/history/com_disagg_xls_2023.zip'
-download = requests.get(link_cftc)
-arquivo = zipfile.ZipFile(io.BytesIO(download.content))
-tabela = pd.read_excel(arquivo.open('c_year.xls'))
-dados = tabela[['Market_and_Exchange_Names', 'Report_Date_as_MM_DD_YYYY', 'M_Money_Positions_Long_ALL', 'M_Money_Positions_Short_ALL']]
+
 
 def texto(dados):
+  
+  link_cftc = 'https://www.cftc.gov/files/dea/history/com_disagg_xls_2023.zip'
+  download = requests.get(link_cftc)
+  arquivo = zipfile.ZipFile(io.BytesIO(download.content))
+  tabela = pd.read_excel(arquivo.open('c_year.xls'))
+  dados = tabela[['Market_and_Exchange_Names', 'Report_Date_as_MM_DD_YYYY', 'M_Money_Positions_Long_ALL', 'M_Money_Positions_Short_ALL']]
   
   commodities = ['WHEAT-SRW - CHICAGO BOARD OF TRADE', 
                'WHEAT-HRW - CHICAGO BOARD OF TRADE', 
