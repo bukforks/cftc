@@ -4,5 +4,3 @@ requests
 datetime
 pandas
 xlrd
-io
-zipfile
