@@ -148,9 +148,9 @@ def texto():
   #Títulos e texto 
 
     if movimento == f'inverteram e agora apostam na {inversao}':
-      titulo = f'<strong>CFTC: Fundos invertem e apostam na {inversao} {produto} </strong><br>')
+      titulo = f'<strong>CFTC: Fundos invertem e apostam na {inversao} {produto} </strong><br>'
     else:
-      titulo = f'<strong>CFTC: Aposta na {inversao} {produto} {tit_mov} em {variacao}%</strong> <br>')
+      titulo = f'<strong>CFTC: Aposta na {inversao} {produto} {tit_mov} em {variacao}%</strong> <br>'
 
     texto = f'Os fundos especulativos {movimento}{aposta}{produto}, segundo a Comissão de Negociação de Futuros de Commodities (CFTC). Entre {data_antiga_extenso} e {data_nova_extenso}, {frase_saldo} <br><br>'
     notas += titulo + texto
