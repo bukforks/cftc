@@ -1,0 +1,8 @@
+flask
+gunicorn
+requests
+datetime
+pandas
+xlrd
+io
+zipfile
